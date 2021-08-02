@@ -1,2 +1,25 @@
-$rel: relative;
-$abs: absolute;
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$p1: 15px;
+$btnGrad: linear-gradient(to Right, $limeGreen, $brightCyan);
+$veryLightGray: hsl(220, 16%, 96%);
+
+@mixin btn {
+    background: $btnGrad;
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+@mixin position ($pos-val, $top, $rit, $bot, $lft) {
+    position: $pos-val;
+    @if $top > 0 {
+        top: $top;
+    }
+    right: $rit;
+    left: $lft;
+    bottom: $bot;
+}

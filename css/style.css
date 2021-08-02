@@ -7,6 +7,8 @@
 
 body {
   font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  color: #9698a6;
 }
 
 nav {
@@ -22,33 +24,113 @@ nav {
     justify-content: space-between;
     padding: 0 25px;
   }
-  nav ul, nav button {
+  nav ul,
+nav button {
     display: none;
   }
 
+  h1,
+h2,
+h3,
+h4 {
+    color: #2d314d;
+  }
+
   .cta-section {
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
   }
   .cta-section div {
+    padding: 0px 18px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 50px;
     order: 3;
+  }
+  .cta-section div h1 {
+    font-size: 38px;
+    font-weight: 400;
+  }
+  .cta-section div p {
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  .cta-section div button {
+    background: linear-gradient(to Right, #31d35c, #2bb7da);
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 16px 40px;
+    margin-top: 15px;
+  }
+
+  .features-section {
+    padding: 70px 0 70px;
+    background-color: #f3f4f6;
+  }
+  .features-section .why-choose-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .features-section .why-choose-wrapper h1 {
+    width: 290px;
+    font-weight: 300;
+    font-size: 35px;
+  }
+  .features-section p {
+    font-size: 15px;
+    line-height: 1.4;
+    width: 325px;
+  }
+  .features-section .features {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 9.867vw;
+    margin-top: 70px;
+  }
+  .features-section .features div {
+    gap: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .features-section .features div h3 {
+    font-weight: 100;
+    margin-top: 5px;
+  }
+  .features-section .features div p {
+    line-height: 1.7;
+    width: 340px;
   }
 
   .bg-intro {
-    position: relative;
     z-index: -1;
-    bottom: 50px;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 47px;
   }
 
   .image-mockups {
     margin: 0 auto;
-    position: absolute;
     height: 471px;
     width: 365px;
-    bottom: 160px;
     z-index: -1;
-    left: 0;
+    position: absolute;
     right: 0;
+    left: 0;
+    bottom: 158px;
   }
 }
 
