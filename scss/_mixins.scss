@@ -1,0 +1,30 @@
+@mixin btn {
+    background: $btnGrad;
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: 16px 40px;
+    color: #fff;
+}
+
+@mixin position ($pos-val, $top, $rit, $bot, $lft) {
+    position: $pos-val;
+    @if $top > 0 {
+        top: $top;
+    }
+    right: $rit;
+    left: $lft;
+    bottom: $bot;
+}
+
+@mixin weight-size {
+    font-weight: 300;
+    font-size: 35px;
+}
+
+@mixin flexbox ($gap) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: $gap;
+}
