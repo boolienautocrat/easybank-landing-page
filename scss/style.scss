@@ -8,10 +8,19 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
   color: $grayishBlue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 nav {
@@ -29,6 +38,26 @@ nav {
     ul,
     button {
       display: none;
+    }
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav.active {
+    display: block;
+    box-shadow: 0px 20px 100px #3a3a3ab8;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90%;
+    @include position(absolute, 75px, 0, 0, 0);
+    padding: 35px 0;
+    ul {
+      color: #000;
+      list-style: none;
+      @include flexbox(25px);
     }
   }
 
