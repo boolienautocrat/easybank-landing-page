@@ -57,7 +57,7 @@ nav {
     ul {
       color: #000;
       list-style: none;
-      @include flexbox(25px);
+      @include flexbox(25px, column);
     }
   }
 
@@ -99,7 +99,7 @@ nav {
     padding: 70px 0 70px;
     background-color: $LightGray;
     .why-choose-wrapper {
-      @include flexbox(20px);
+      @include flexbox(20px, column);
       align-items: center;
       h1 {
         width: 290px;
@@ -112,10 +112,10 @@ nav {
       width: 325px;
     }
     .features {
-      @include flexbox(9.867vw);
+      @include flexbox(9.867vw, column);
       margin-top: 70px;
       div {
-        @include flexbox(18px);
+        @include flexbox(18px, column);
         align-items: center;
         h3 {
           font-weight: 100;
@@ -190,7 +190,7 @@ nav {
     padding: 40px 0 40px;
     background-color: hsl(233, 26%, 24%);
     .socials {
-      @include flexbox(35px);
+      @include flexbox(35px, column);
       align-items: center;
       .social-icn {
         display: flex;
@@ -201,14 +201,14 @@ nav {
       margin-top: 13px;
       color: $white;
       ul {
-        @include flexbox(15px);
+        @include flexbox(15px, column);
         font-weight: 100;
         font-size: 16px;
         list-style: none;
       }
     }
     .cta-copyright {
-      @include flexbox(20px);
+      @include flexbox(20px, column);
       margin-top: 13px;
       button {
         @include btn;
@@ -221,7 +221,7 @@ nav {
 
   .credits {
     padding-bottom: 15px;
-    background-color: hsl(233, 26%, 24%);;
+    background-color: hsl(233, 26%, 24%);
     font-size: 13px;
     text-align: center;
     a {
@@ -240,5 +240,31 @@ nav {
     width: 365px;
     z-index: -1;
     @include position(absolute, 0, 0, 158px, 0);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .icn-ham {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 218px
+    ;
+    padding: 0 130px 0;
+    ul {
+      @include flexbox(25px, row);
+      list-style: none;
+      li {
+        font-size: 16px;
+      }
+    }
+    button {
+      @include btn;
+      font-weight: 600;
+    }
   }
 }

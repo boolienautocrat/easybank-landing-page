@@ -24,9 +24,9 @@
   font-size: 35px;
 }
 
-@mixin flexbox($gap) {
+@mixin flexbox($gap, $dir) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $dir;
   text-align: center;
   gap: $gap;
 }
