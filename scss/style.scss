@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,13 @@ a {
 
 nav {
   background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $darkBlue;
 }
 
 @media screen and (max-width: 425px) {
@@ -59,13 +67,6 @@ nav {
       list-style: none;
       @include flexbox(25px, column);
     }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: $darkBlue;
   }
 
   .cta-section {
@@ -248,23 +249,68 @@ nav {
     display: none;
   }
 
-  nav {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    gap: 218px
-    ;
-    padding: 0 130px 0;
-    ul {
-      @include flexbox(25px, row);
-      list-style: none;
-      li {
-        font-size: 16px;
+  header {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    nav {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      gap: 218px;
+      padding: 0 130px 0;
+      ul {
+        @include flexbox(25px, row);
+        list-style: none;
+        li {
+          font-size: 15px;
+        }
+      }
+      button {
+        @include btn;
+        font-weight: 600;
       }
     }
-    button {
-      @include btn;
-      font-weight: 600;
+  }
+  .cta-section {
+    background-color: $veryLightGray;
+    display: flex;
+    height: 700px;
+    .cta-text {
+      position: absolute;
+      top: 230px;
+      width: 50%;
+      left: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 35px;
+      h1 {
+        font-weight: 500;
+        font-size: 48px;
+        width: 500px;
+      }
+      p {
+        width: 400px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      button {
+        @include btn;
+        margin: 0;
+        width: 170px;
+        padding: 14px 40px;
+      }
+    }
+    .bg-intro {
+      position: absolute;
+      top: -180px;
+      left: 573px;
+    }
+    .image-mockups {
+      top: -42px;
+      left: 720px;
+      position: absolute;
     }
   }
 }
