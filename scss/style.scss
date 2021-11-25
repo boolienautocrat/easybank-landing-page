@@ -257,8 +257,8 @@ h4 {
       display: flex;
       align-items: center;
       height: 70px;
-      gap: 218px;
-      padding: 0 130px 0;
+      gap: 16.16%;
+      padding: 0 10% 0;
       ul {
         @include flexbox(25px, row);
         list-style: none;
@@ -272,6 +272,7 @@ h4 {
       }
     }
   }
+
   .cta-section {
     background-color: $veryLightGray;
     display: flex;
@@ -293,7 +294,7 @@ h4 {
       p {
         width: 400px;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.6;
       }
       button {
         @include btn;
@@ -308,9 +309,31 @@ h4 {
       left: 573px;
     }
     .image-mockups {
-      top: -42px;
+      top: -38px;
       left: 720px;
       position: absolute;
+    }
+  }
+  .features-section {
+    padding-top: 80px;
+    padding-left: 130px;
+    background-color: $LightGray;
+    @include flexbox(80px, column);
+    text-align: left;
+    .why-choose-wrapper {
+      h1 {
+        font-size: 37px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 17px;
+        width: 51%;
+        line-height: 26px;
+        margin-top: 22px;
+      }
+    }
+    .features {
+      display: flex;
     }
   }
 }
