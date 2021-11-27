@@ -315,8 +315,7 @@ h4 {
     }
   }
   .features-section {
-    padding-top: 80px;
-    padding-left: 130px;
+    padding: 80px 0 90px 110px;
     background-color: $LightGray;
     @include flexbox(80px, column);
     text-align: left;
@@ -333,7 +332,23 @@ h4 {
       }
     }
     .features {
+      width: 1180px;
       display: flex;
+      gap: 35px;
+      .feat-card {
+        @include flexbox(22px, column);
+        align-items: flex-start;
+        text-align: left;
+        h3 {
+          font-weight: 400;
+          font-size: 22px;
+          margin-top: 12px;
+        }
+        p {
+          line-height: 1.6;
+          font-size: 16px;
+        }
+      }
     }
   }
 }
