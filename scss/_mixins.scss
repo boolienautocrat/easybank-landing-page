@@ -9,9 +9,7 @@
 
 @mixin position($pos-val, $top, $rit, $bot, $lft) {
   position: $pos-val;
-  @if $top > 0 {
-    top: $top;
-  }
+  top: $top;
   right: $rit;
   left: $lft;
   @if $bot >0 {
