@@ -189,7 +189,7 @@ h4 {
     gap: 30px;
     text-align: center;
     padding: 40px 0 40px;
-    background-color: hsl(233, 26%, 24%);
+    background-color: $darkBlue;
     .socials {
       @include flexbox(35px, column);
       align-items: center;
@@ -245,6 +245,10 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+
   .icn-ham {
     display: none;
   }
@@ -355,6 +359,7 @@ h4 {
     background-color: $veryLightGray;
     padding-left: 135px;
     padding-top: 100px;
+    padding-bottom: 100px;
     h1 {
       font-size: 37px;
       font-weight: 400;
@@ -374,7 +379,7 @@ h4 {
           height: 11.3rem;
         }
         .blog-info {
-          gap: 10px;
+          gap: 12px;
           display: flex;
           flex-direction: column;
           padding: 25px 10px 25px 20px;
@@ -387,11 +392,65 @@ h4 {
             width: 247px;
           }
           p {
-            line-height: 1.4;
+            line-height: 1.5;
             width: 247px;
             font-size: 15px;
           }
         }
+      }
+    }
+  }
+
+  footer {
+    background-color: $darkBlue;
+    padding: 60px 120px 50px 135px;
+    display: flex;
+    gap: 160px;
+    .socials {
+      .social-icn {
+        display: flex;
+        gap: 12px;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .about-company {
+      ul {
+        display: flex;
+        gap: 100px;
+        font-size: 14px;
+        list-style: none;
+        .f-3,
+        .s-3 {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          gap: 20px;
+        }
+      }
+    }
+    .cta-copyright {
+      @include flexbox(30px, column);
+      margin-left: auto;
+      button {
+        @include btn;
+        margin-right: 0;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .credits {
+    padding-bottom: 16px;
+    text-align: center;
+    background-color: $darkBlue;
+    p {
+      font-size: 14px;
+      a {
+        color: hsl(228, 45%, 44%);
       }
     }
   }
